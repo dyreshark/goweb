@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Home</title>
+  </head>
+  <body style="margin-left: 30px">
+    Welcome back, {{.Name}}!
+    <br />
+    <br />
+    <form method="POST" action="/home">
+      <input name="message"><br />
+      <input type="submit" value="Submit!">
+    </form>
+    {{range $_, $post := .Posts}}
+    <div>
+      {{$post.User}}:<br />
+      {{$post.Message}}
+    </div>
+    {{end}}
+  </body>
+</html>
