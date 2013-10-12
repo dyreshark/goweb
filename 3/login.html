@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Login</title>
+  </head>
+  <body>
+    {{if .}}<h1>Login failed</h1>{{end}}
+    <form method="POST" action="/login">
+      Username: <input name="user"><br />
+      Password: <input type="password" name="pass"><br />
+      <input type="submit" value="login">
+    </form>
+  </body>
+</html>
